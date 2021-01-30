@@ -1,40 +1,57 @@
 ﻿using System;
 using System.Collections.Generic;
-using SimpleChat.Dal.Repositories.Interfaces;
-using SimpleChat.Entities;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
+using SimpleChat.DAL.Entities;
+using SimpleChat.DAL.Repositories.Interfaces;
 
-namespace SimpleChat.Dal.Repositories
+namespace SimpleChat.DAL.Repositories
 {
     public class UserRepository:IRepository<UserEntity>
     {
-        public UserRepository()
+        private readonly SimpleChatDbContext _dbContext;
+        public UserRepository(SimpleChatDbContext dbContext)
         {
-            
+            _dbContext = dbContext;
         }
 
         public IList<UserEntity> GetAll()
         {
-            throw new NotImplementedException();
+            return _dbContext.Users.ToList();
         }
 
         public UserEntity GetById(Guid id)
         {
-            throw new NotImplementedException();
+            return _dbContext.Users.FirstOrDefault(s => s.Id == id);
         }
 
         public void Remove(Guid id)
         {
-            throw new NotImplementedException();
+            UserEntity entity = _dbContext.Users.FirstOrDefault(s => s.Id == id);
+            if (entity != null)
+            {
+                _dbContext.Remove(entity);
+                _dbContext.SaveChanges();
+            }
         }
 
-        public Guid Insert(UserEntity entity)
+        public UserEntity Insert(UserEntity entity)
         {
-            throw new NotImplementedException();
+            if (entity != null)
+            {
+                _dbContext.Users.Add(entity);
+                _dbContext.SaveChanges();
+            }
+            return entity;
         }
 
-        public Guid? Update(UserEntity entity)
+        public void Update(UserEntity entity)
         {
-            throw new NotImplementedException();
+            if (entity != null)
+            {
+                _dbContext.Users.Update(entity);
+                _dbContext.SaveChanges();
+            }
         }
     }
 }

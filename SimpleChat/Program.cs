@@ -5,8 +5,6 @@ using System;
 using System.Collections.Generic;
 using Microsoft.Extensions.DependencyInjection;
 using SimpleChat.DAL;
-using SimpleChat.DAL.Entities;
-using SimpleChat.DAL.Repositories;
 
 namespace SimpleChat
 {

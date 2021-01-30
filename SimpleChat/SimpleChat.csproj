@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SimpleChat.DAL\SimpleChat.DAL.csproj" />
     <ProjectReference Include="..\SimpleChat.Entities\SimpleChat.DAL.csproj" />
   </ItemGroup>
 

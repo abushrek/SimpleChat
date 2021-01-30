@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using SimpleChat.Entities.Interfaces;
+using SimpleChat.DAL.Entities.Interfaces;
 
-namespace SimpleChat.Dal.Repositories.Interfaces
+namespace SimpleChat.DAL.Repositories.Interfaces
 {
-    public interface IRepository<TEntity> where TEntity : IEntity
+    public interface IRepository<TEntity> where TEntity:IEntity
     {
         IList<TEntity> GetAll();
         TEntity GetById(Guid id);
         void Remove(Guid id);
-        Guid Insert(TEntity entity);
-        Guid? Update(TEntity entity);
+        TEntity Insert(TEntity entity);
+        void Update(TEntity entity);
     }
 }
