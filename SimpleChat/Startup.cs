@@ -7,7 +7,8 @@ using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using SimpleChat.Entities;
 
 namespace SimpleChat
 {
@@ -23,6 +24,11 @@ namespace SimpleChat
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<SimpleChatDbContext>(options =>
+                options.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=SimpleChatDb;Trusted_Connection=True;", builder =>
+                {
+                    builder.EnableRetryOnFailure(5, TimeSpan.FromSeconds(10), null);
+                }));
             services.AddControllersWithViews();
         }
 
