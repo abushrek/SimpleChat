@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
+using SimpleChat.DAL.Entities;
 
-namespace SimpleChat.Entities
+namespace SimpleChat.DAL
 {
     public class Seeder
     {
         public static void Seed(SimpleChatDbContext context)
         {
+            context.Database.EnsureCreated();
+
             if (context.Users.Any())
                 return; //users exists
             CredentialsEntity credentials = new CredentialsEntity

@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SimpleChat.Entities\SimpleChat.Entities.csproj" />
+    <ProjectReference Include="..\SimpleChat.Entities\SimpleChat.DAL.csproj" />
   </ItemGroup>
 
 </Project>

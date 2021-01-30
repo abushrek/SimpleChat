@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using SimpleChat.DAL.Entities;
 
-namespace SimpleChat.Entities
+namespace SimpleChat.DAL
 {
     public class SimpleChatDbContext:DbContext
     {
@@ -9,6 +10,11 @@ namespace SimpleChat.Entities
         public DbSet<ChannelUserEntity> ChannelUsers { get; set; }
         public DbSet<MessageEntity> Messages { get; set; }
         public DbSet<UserEntity> Users { get; set; }
+
+        public SimpleChatDbContext()
+        {
+            
+        }
 
         public SimpleChatDbContext(DbContextOptions<SimpleChatDbContext> options):base(options)
         {

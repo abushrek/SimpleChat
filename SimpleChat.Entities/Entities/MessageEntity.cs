@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SimpleChat.Entities
+namespace SimpleChat.DAL.Entities
 {
     public class MessageEntity:BaseEntity
     {

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace SimpleChat.Entities
+namespace SimpleChat.DAL.Entities
 {
     public class UserEntity:BaseEntity
     {

@@ -1,7 +1,7 @@
 ﻿using System;
-using SimpleChat.Entities.Interfaces;
+using SimpleChat.DAL.Entities.Interfaces;
 
-namespace SimpleChat.Entities
+namespace SimpleChat.DAL.Entities
 {
     public class BaseEntity:IEntity
     {

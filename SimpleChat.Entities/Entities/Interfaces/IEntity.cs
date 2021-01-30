@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SimpleChat.Entities.Interfaces
+namespace SimpleChat.DAL.Entities.Interfaces
 {
     public interface IEntity
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace SimpleChat.Entities.Migrations
+namespace SimpleChat.DAL.Migrations
 {
     public partial class InitialMigration : Migration
     {

@@ -8,7 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
-using SimpleChat.Entities;
+using SimpleChat.DAL;
 
 namespace SimpleChat
 {
