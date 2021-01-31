@@ -9,7 +9,7 @@ namespace SimpleChat.DAL.Repositories.Interfaces
         IList<TEntity> GetAll();
         TEntity GetById(Guid id);
         void Remove(Guid id);
-        TEntity Insert(TEntity entity);
+        TEntity Add(TEntity entity);
         void Update(TEntity entity);
     }
 }

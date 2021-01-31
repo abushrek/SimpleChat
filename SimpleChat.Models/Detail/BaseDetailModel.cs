@@ -3,8 +3,7 @@ using SimpleChat.Models.Interfaces;
 
 namespace SimpleChat.Models.Detail
 {
-    public class BaseDetailModel:IDetailModel
+    public abstract class BaseDetailModel : BaseModel, IDetailModel
     {
-        public Guid Id { get; set; }
     }
 }

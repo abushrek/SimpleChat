@@ -12,10 +12,10 @@ using SimpleChat.Models.List;
 
 namespace SimpleChat.BL.Facades
 {
-    public class UserFacade:BaseListDetailFacade<UserListModel,UserDetailModel,UserEntity>
+    public class MessageFacade:BaseListDetailFacade<MessageListModel,MessageDetailModel,MessageEntity>
     {
-        public UserFacade(IRepository<UserEntity> repository) 
-            : base(repository, new UserMapper(), new UserMapper())
+        public MessageFacade(IRepository<MessageEntity> repository) 
+            : base(repository, new MessageMapper(), new MessageMapper())
         {
         }
     }

@@ -8,14 +8,13 @@ using SimpleChat.DAL.Entities;
 using SimpleChat.DAL.Repositories;
 using SimpleChat.DAL.Repositories.Interfaces;
 using SimpleChat.Models.Detail;
-using SimpleChat.Models.List;
 
 namespace SimpleChat.BL.Facades
 {
-    public class UserFacade:BaseListDetailFacade<UserListModel,UserDetailModel,UserEntity>
+    public class CredentialsFacade:BaseFacade<CredentialsDetailModel,CredentialsEntity>
     {
-        public UserFacade(IRepository<UserEntity> repository) 
-            : base(repository, new UserMapper(), new UserMapper())
+        public CredentialsFacade(IRepository<CredentialsEntity> repository) 
+            : base(repository, new CredentialsMapper())
         {
         }
     }

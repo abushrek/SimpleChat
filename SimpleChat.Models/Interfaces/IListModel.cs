@@ -1,7 +1,7 @@
 ﻿namespace SimpleChat.Models.Interfaces
 {
-    public interface IListModel:IModel
+    public interface IListModel : IModel
     {
-        
+
     }
 }

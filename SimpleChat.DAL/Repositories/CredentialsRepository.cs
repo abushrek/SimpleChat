@@ -34,7 +34,7 @@ namespace SimpleChat.DAL.Repositories
             }
         }
 
-        public CredentialsEntity Insert(CredentialsEntity entity)
+        public CredentialsEntity Add(CredentialsEntity entity)
         {
             if (entity != null)
             {

@@ -34,7 +34,7 @@ namespace SimpleChat.DAL.Repositories
             }
         }
 
-        public MessageEntity Insert(MessageEntity entity)
+        public MessageEntity Add(MessageEntity entity)
         {
             if (entity != null)
             {
