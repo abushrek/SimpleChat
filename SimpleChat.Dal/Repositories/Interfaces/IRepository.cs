@@ -4,7 +4,7 @@ using SimpleChat.DAL.Entities.Interfaces;
 
 namespace SimpleChat.DAL.Repositories.Interfaces
 {
-    public interface IRepository<TEntity> where TEntity:IEntity
+    public interface IRepository<TEntity> where TEntity: IEntity
     {
         IList<TEntity> GetAll();
         TEntity GetById(Guid id);
