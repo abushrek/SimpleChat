@@ -5,7 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Facades\" />
+    <ProjectReference Include="..\SimpleChat.DAL\SimpleChat.DAL.csproj" />
+    <ProjectReference Include="..\SimpleChat.Models\SimpleChat.Models.csproj" />
   </ItemGroup>
 
 </Project>

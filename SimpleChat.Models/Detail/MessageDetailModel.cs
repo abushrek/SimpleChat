@@ -2,7 +2,7 @@
 
 namespace SimpleChat.Models.Detail
 {
-    public class MessageDetailModel:BaseModel
+    public class MessageDetailModel: BaseDetailModel
     {
         public string Title { get; set; }
         public string Content { get; set; }

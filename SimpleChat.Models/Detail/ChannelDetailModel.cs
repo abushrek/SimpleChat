@@ -3,7 +3,7 @@ using SimpleChat.Models.List;
 
 namespace SimpleChat.Models.Detail
 {
-    public class ChannelDetailModel:BaseModel
+    public class ChannelDetailModel:BaseDetailModel
     {
         public string Name { get; set; }
         public UserDetailModel Owner { get; set; }
