@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 using SimpleChat.BL.Facades.Interfaces;
 using SimpleChat.BL.Mappers.Interfaces;
 using SimpleChat.DAL.Entities.Interfaces;
@@ -19,14 +21,24 @@ namespace SimpleChat.BL.Facades
             this._listMapper = listMapper;
         }
 
-        public new IEnumerable<TListModel> GetAll()
+        public IEnumerable<TListModel> GetAllListModels()
         {
-            return Repository.GetAll().Select(s=>_listMapper.MapEntityToModel(s));
+            return Repository.GetAll().Select(_listMapper.MapEntityToModel);
         }
 
-        public new TListModel GetById(Guid id)
+        public async Task<IEnumerable<TListModel>> GetAllListModelsAsync(CancellationToken token = default)
+        {
+            return (await Repository.GetAllAsync(token)).Select(_listMapper.MapEntityToModel);
+        }
+
+        public TListModel GetListModelById(Guid id)
         {
             return _listMapper.MapEntityToModel(Repository.GetById(id));
+        }
+
+        public async Task<TListModel> GetListModelByIdAsync(Guid id, CancellationToken token = default)
+        {
+            return _listMapper.MapEntityToModel(await Repository.GetByIdAsync(id, token));
         }
     }
 }

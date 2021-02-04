@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleChat.DAL", "SimpleCha
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleChat.BL", "SimpleChat.BL\SimpleChat.BL.csproj", "{A8D53AE4-C1FF-4881-89AA-E8914C152DC3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleChat.Models", "SimpleChat.Models\SimpleChat.Models.csproj", "{34291BE5-D889-4C5B-B8F3-8EA3C1BEE9DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleChat.Models", "SimpleChat.Models\SimpleChat.Models.csproj", "{34291BE5-D889-4C5B-B8F3-8EA3C1BEE9DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

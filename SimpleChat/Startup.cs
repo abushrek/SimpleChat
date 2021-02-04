@@ -5,7 +5,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
 using Microsoft.EntityFrameworkCore;
+using SimpleChat.BL.Installers;
 using SimpleChat.DAL;
+using SimpleChat.DAL.Installers;
+using SimpleChat.DAL.Repositories.Interfaces;
 
 namespace SimpleChat
 {
@@ -26,6 +29,8 @@ namespace SimpleChat
                 {
                     builder.EnableRetryOnFailure(5, TimeSpan.FromSeconds(10), null);
                 }));
+            new DALInstaller().Install(services);
+            new BLInstaller().Install(services);
             services.AddControllersWithViews();
         }
 
